@@ -80,18 +80,18 @@ $(function () {
 
 
 
-        /* ===== Popup Menu ===== */
-        $(document).on('click', '.header-wrap .header-right .theme-btn', function (e) {
-            e.preventDefault();
-            $('.popup-menu-wrap').addClass('active');
-        });
+    /* ===== Popup Menu ===== */
+    $(document).on('click', '.header-wrap .header-right .theme-btn', function (e) {
+        e.preventDefault();
+        $('.popup-menu-wrap').addClass('active');
+    });
 
-        $(document).on('click', '.popup-menu-close-btn .icon', function () {
-            $('.popup-menu-wrap').removeClass('active');
-        });
+    $(document).on('click', '.popup-menu-close-btn .icon', function () {
+        $('.popup-menu-wrap').removeClass('active');
+    });
 
 
-    
+
 
 
 
@@ -155,7 +155,7 @@ $(function () {
     //       stickyEls2.forEach((panel, i) => {
     //         var stickyPosition = panel.offsetTop;
     //         var scrollPosition = window.scrollY;
-        
+
     //         // Add or remove 'sticky' class based on scroll position
     //         if (scrollPosition >= stickyPosition) {
     //             panel.classList.add('sticky');
@@ -165,7 +165,7 @@ $(function () {
     //         })
     //     });
     //   });
-      
+
 
 
     // gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -226,15 +226,15 @@ $(function () {
     //     }
 
     //     function updateScroller() {
-        
+
     //         var resized = scroller.resizeRequest > 0;
-                
+
     //         if (resized) {    
     //             var height = scroller.target.clientHeight;
     //             body.style.height = height + "px";
     //             scroller.resizeRequest = 0;
     //         }
-                
+
     //         var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
 
     //         scroller.endY = scrollY;
@@ -244,11 +244,11 @@ $(function () {
     //             scroller.y = scrollY;
     //             scroller.scrollRequest = 0;
     //         }
-            
+
     //         TweenLite.set(scroller.target, { 
     //             y: -scroller.y 
     //         });
-            
+
     //         requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
     //     }
 
@@ -265,7 +265,7 @@ $(function () {
     //             requestId = requestAnimationFrame(updateScroller);
     //         }
     //     }
-            
+
     // }
     // initSmoothScroll();
     // New Scroll End
@@ -280,24 +280,24 @@ $(function () {
     // Transform Text Anim Start
 
     // function ShowcaseOverlapping() {
-		
-        
+
+
     //     gsap.utils.toArray('#smooth-content').forEach((pinnedSection) => {
-            
+
     //         const transformTextsAnim = pinnedSection.querySelectorAll('.sticky-statement2');
-            
+
     //         function setImagesProperties() {								
     //             gsap.set(transformTextsAnim, { height: window.innerHeight});	
     //         }
-            
+
     //         setImagesProperties();
-            
+
     //         window.addEventListener('resize', setImagesProperties);	
-        
+
     //         transformTextsAnim.forEach((transformTextAnim, i, arr) => {
     //                 const durationMultiplier = arr.length - i - 1;
-                    
-                    
+
+
     //                 ScrollTrigger.create({
     //                     trigger: transformTextAnim,
     //                     start: function() {
@@ -312,7 +312,7 @@ $(function () {
     //                     pinSpacing: false,
     //                     scrub: true,
     //                 });
-                    
+
     //                 const animationProperties = {
     //                     y: 500,
     //                     scale: 0.65,
@@ -322,9 +322,9 @@ $(function () {
     //                     ease: 0.05,
     //                     // ease: Linear.easeNone
     //                 };
-                    
+
     //                 // animationProperties.filter = "blur(10px)";
-                    
+
     //                 ScrollTrigger.create({
     //                     trigger: transformTextAnim,
     //                     start: function() {
@@ -341,10 +341,10 @@ $(function () {
     //                 });
 
     //         });
-        
+
     //     });
-		
-	// }
+
+    // }
     // ShowcaseOverlapping();
     // Transform Text Anim End
 
@@ -378,11 +378,11 @@ $(function () {
     /* ===== # Experience Popup ===== */
     $(document).on('click', '.experience-box .experience-button-box .experience-button', function (e) {
         e.preventDefault();
-        $('.experience-popup').addClass('active');
+        // $('.experience-popup').addClass('active');
     });
-    $(document).on('click', '.experience-popup .experience-popup-content-wrap .close-experience-popup-btn', function () {
-        $('.experience-popup').removeClass('active');
-    });
+    // $(document).on('click', '.experience-popup .experience-popup-content-wrap .close-experience-popup-btn', function () {
+    //     $('.experience-popup').removeClass('active');
+    // });
 
 
     /* ==== # Custom Cursor ===== */
@@ -428,7 +428,7 @@ $(function () {
 
 
 
-        
+
 
 
 });
@@ -507,15 +507,15 @@ function scroll_animations() {
                 trigger: box,
                 once: defaults.once,
                 // start: "top bottom+=20%",
-                start: "top bottom+="+transWidth,
+                start: "top bottom+=" + transWidth,
                 toggleActions: "play none none reverse",
                 markers: !1,
-                onUpdate: function(self) {
+                onUpdate: function (self) {
                     // Get the current position of the box relative to the viewport
                     // var bounding = box.getBoundingClientRect();
                     // var offsetTopFromViewport = bounding.top;
 
-                    
+
                     // if (box.dataset.animation == 'slide_and_scale') {
                     //     console.log("Offset from top:", offsetTopFromViewport);
 
